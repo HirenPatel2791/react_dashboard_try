@@ -17,6 +17,7 @@ import loadPosts from 'bundle-loader?lazy!../../pages/posts/Posts';
 import loadPrivacy from 'bundle-loader?lazy!../../pages/privacy/Privacy';
 import loadProfile from 'bundle-loader?lazy!../../pages/profile/Profile';
 import loadNotFound from 'bundle-loader?lazy!../../pages/notFound/NotFound';
+import loadMessages from 'bundle-loader?lazy!../../pages/messages/Messages';
 /* eslint-enable */
 
 import s from './Layout.scss';
@@ -27,7 +28,9 @@ import Sidebar from '../Sidebar';
 
 // Dashboard component is loaded directly as an example of server side rendering
 import Dashboard from '../../pages/dashboard/Dashboard';
+// import Messages from '../../pages/messages/Messages';
 
+const MessagesBundle = Bundle.generateBundle(loadMessages);
 const PostsBundle = Bundle.generateBundle(loadPosts);
 const PrivacyBundle = Bundle.generateBundle(loadPrivacy);
 const ProfileBundle = Bundle.generateBundle(loadProfile);
@@ -61,6 +64,7 @@ class Layout extends React.Component {
           <main className={s.content}>
             <Switch>
               <Route path="/app" exact component={Dashboard} />
+              <Route path="/app/messages" component={MessagesBundle}/>
               <Route path="/app/posts" component={PostsBundle} />
               <Route path="/app/profile" exact component={ProfileBundle} />
               <Route path="/app/privacy" exact component={PrivacyBundle} />

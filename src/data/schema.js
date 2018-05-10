@@ -7,6 +7,8 @@ import me from './queries/me';
 import news from './queries/news';
 import posts from './queries/posts';
 import addPost from './mutations/posts';
+import messages from './queries/messages';
+import addMessage from './mutations/messages';
 
 const schemaConfig = {
   query: new ObjectType({
@@ -15,6 +17,7 @@ const schemaConfig = {
       me,
       news,
       posts,
+      messages,
     },
   }),
 };
@@ -25,6 +28,7 @@ if (__DEV__) {
     name: 'Mutation',
     fields: {
       addPost,
+      addMessage
     },
   });
 }

@@ -20,6 +20,21 @@ const Sidebar = () => (
         iconName="glyphicon-tree-conifer"
       />
       <LinksGroup
+        header="Messages"
+        headerLink="/app/messages"
+        childrenLinks={[
+          {
+            name: 'Show all',
+            link: '/app/messages',
+          },
+          {
+            name: 'Create new',
+            link: '/app/messages/new',
+          },
+        ]}
+        iconName="glyphicon-envelope"
+      />
+      <LinksGroup
         header="Posts"
         headerLink="/app/posts"
         childrenLinks={[

@@ -287,8 +287,14 @@ class Dashboard extends React.Component {
               <Button bsSize="small" bsStyle="warning">
                 Warning
               </Button>
-              <Button bsSize="small" bsStyle="inverse">
-                Inverse
+              <Button bsSize="small" bsStyle="danger">
+                Danger
+              </Button>
+              <Button bsSize="small" bsStyle="primary">
+                Primary
+              </Button>
+              <Button bsStyle="link">
+                Link
               </Button>
             </ButtonToolbar>
             <ButtonGroup className="mb">
